@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navber = () => {
   return (
-    <nav className="flex items-center gap-6 p-4 bg-gray-800">
+    <nav className="flex items-center gap-6 p-4 bg-gray-800 fixed w-full">
       <NavLink
         to="/"
         className={({ isActive }) =>

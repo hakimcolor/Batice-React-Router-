@@ -7,7 +7,7 @@ const Post = ({ PostApi }) => {
   const AllPost = use(PostApi);
   console.log(AllPost);
   
-  return <div>
+  return <div className="py-20">
     {
       AllPost.map((post)=><ShowAllpost post={post} ></ShowAllpost>)
     }

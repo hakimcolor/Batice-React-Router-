@@ -11,6 +11,7 @@ import Useres from './componentes/Useres';
 import Useres2 from './componentes/Useres2';
 import UserDetils from './componentes/UserDetils';
 import Post from './componentes/Post';
+import PostDeteles from './componentes/PostDeteles';
 const userPromise = fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json());
 const PostApi = fetch(`https://jsonplaceholder.typicode.com/posts`).then(res=>res.json());
 const route = createBrowserRouter([
@@ -52,6 +53,12 @@ const route = createBrowserRouter([
             <Post PostApi={PostApi}></Post>
           </Suspense>
         ),
+      },
+      {
+        path: 'user3/:ID',
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.ID}`),
+        Component:PostDeteles,
       },
     ],
   },

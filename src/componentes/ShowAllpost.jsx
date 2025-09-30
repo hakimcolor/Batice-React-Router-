@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ShowAllpost = ({ post }) => {
-  const { id, title, body, userId } = post; // Destructure object
+  const { id, title, body, userId } = post; 
 
   return (
     <div className="border rounded-lg shadow-md p-4 mb-4 max-w-md mx-auto">
@@ -10,9 +11,11 @@ const ShowAllpost = ({ post }) => {
       <p className="text-sm text-gray-500">
         Post ID: {id} | User ID: {userId}
       </p>
-      <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Read More
-      </button>
+      <Link to={`/user3/${id}`}>
+        <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          Read More
+        </button>
+      </Link>
     </div>
   );
 };
