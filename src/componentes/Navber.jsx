@@ -62,7 +62,20 @@ const Navber = () => {
           }`
         }
       >
-        Users3
+   All_Post
+      </NavLink>
+      
+      <NavLink
+        to="/gyme"
+        className={({ isActive }) =>
+          `text-lg font-medium transition-colors ${
+            isActive
+              ? 'text-cyan-400 border-b-2 border-cyan-400'
+              : 'text-gray-300 hover:text-white'
+          }`
+        }
+      >
+     Gyme
       </NavLink>
       
     </nav>

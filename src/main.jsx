@@ -12,8 +12,10 @@ import Useres2 from './componentes/Useres2';
 import UserDetils from './componentes/UserDetils';
 import Post from './componentes/Post';
 import PostDeteles from './componentes/PostDeteles';
+import GymeALL from './componentes/Gemcard/GymeALL';
 const userPromise = fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json());
-const PostApi = fetch(`https://jsonplaceholder.typicode.com/posts`).then(res=>res.json());
+const PostApi = fetch(`https://jsonplaceholder.typicode.com/posts`).then(res => res.json());
+const GymeData = fetch('./Data.json').then(res => res.json());
 const route = createBrowserRouter([
   {
     path: '/',
@@ -58,7 +60,15 @@ const route = createBrowserRouter([
         path: 'user3/:ID',
         loader: ({ params }) =>
           fetch(`https://jsonplaceholder.typicode.com/posts/${params.ID}`),
-        Component:PostDeteles,
+        Component: PostDeteles,
+      },
+      {
+        path: 'gyme',
+        element: (
+          <Suspense fallback={<h1>Loding...now .</h1>}>
+            <GymeALL GymeData={GymeData}></GymeALL>
+          </Suspense>
+        ),
       },
     ],
   },

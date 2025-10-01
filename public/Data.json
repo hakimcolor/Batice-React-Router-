@@ -1,0 +1,47 @@
+[
+  {
+    "id": "basic",
+    "name": "Basic Plan",
+    "price": 29.99,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "features": [
+      "Access to gym equipment",
+      "1 free personal training session",
+      "Locker room access",
+      "Free water refill",
+      "Access to mobile app tracking"
+    ]
+  },
+  {
+    "id": "standard",
+    "name": "Standard Plan",
+    "price": 49.99,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "features": [
+      "Unlimited gym access",
+      "Group fitness classes",
+      "5 personal training sessions",
+      "Free fitness assessment",
+      "Access to yoga and pilates",
+      "Free guest pass once a month"
+    ]
+  },
+  {
+    "id": "premium",
+    "name": "Premium Plan",
+    "price": 79.99,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "features": [
+      "24/7 unlimited access",
+      "Unlimited group classes",
+      "10 personal training sessions",
+      "Sauna & spa access",
+      "Nutrition consultation",
+      "VIP lounge access",
+      "Free protein shakes after workout"
+    ]
+  }
+]

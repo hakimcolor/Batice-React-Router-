@@ -6,7 +6,10 @@ const Root = () => {
   return (
     <div>
       <Navber />
-      <Outlet />
+      <br /><br /> <br /><br /><br />
+      <div className='max-w-[1200px] mx-auto
+      '> <Outlet   /></div>
+     
       <Footer></Footer>
     </div>
   );
